@@ -13,3 +13,11 @@ Install **node.js** then hit **npm install cocos-2d** and you're ready to go
 Play
 ====
 Enter **cocos server** when in the directory.
+
+Controls
+====
+
+Z = up
+Q = left
+D = right
+S = down
