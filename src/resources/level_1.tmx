@@ -21,13 +21,28 @@
  </layer>
  <layer name="Tile Layer 2" width="50" height="50">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+1YSa7CMAzthnJHBAcBwUGA/oN8hruRLixZlodUSRsX/KTIbeo4npK4GTZd95fasHL6Su39BbS1HyMeejzGvktq55VRatfYZ+HYd92pt/lqIWc+atc+tQOxhcq5pucbI9eaD3/neKXx0nyafLAH91E5/+n50dv2ad853XAfHgvzabbmyMRyOB6QTfkk+yWZuE+KgRYbTeY9tWfP5xvwSLIl+3MgjS2ROeKs7AGlsgM2dtt5+ZeGZ/2sfV7TvaVdueeYd2j7eE3UipWUL173RaovvEvnujQuB3OuB5on8G6d697WBc0Tq1bR+gDgd8v/JTW7lEdLQat9p+gk5dFSmFL7Aji7cvKoJqgO0v8G5rVq9haYUvvPUbOXQvItYOre0QoecqEGPPq2BPAPy/3LegfWnd7NYZu8UrBhUO4cPdzfWpTzP3dX2vr+1qI5PB78bdEcHg/+tny6tnhIekY82sajZixbxsODLjVs8ZAbc6x1D/6tsdYDgUAgEPhlfAD5fY6eECcAAA==
+   H4sIAAAAAAAAA+1Ya0oEMQweZB1voOIPvYXsUUT0Hq6s93B1PYivu9lBAiHk0UdkMms/KJ3ppGmTL20z3R8Pw1sq+4XXX6l8H0A9tx87HzofU9tTKtuF1dSuqc3CZhyGx9GW80LOeNSuu1TuiS1Uzy49vzB6rfHwd05W6i+Np+kHe3Ab1fOenj9G2z7tOzc33Ib7wniarTk6sR5OBnRTOcl+SSdukzjQuNF0vqbyOfLxBjKSbsn+HEh9W3RO2Cp7QKtuwNWqXceh4vbEV/509VtqcXNU33dCqT0aWuzgYO3z2tzpt3Xj3ErWRO45FgWXgm3aPs7hzPDRtfDdKwalePHaF71B5wvv0rku9ctBq4/PFW5pnMC7da5HWxc0TqxcRWsDgN8l/8OakTiV1gyGFEcaHtK5sWk8O7jxanN2rq+kC595z+l552RHSe4L4OzKiSMM4IJyYp3tayF2pP8NLGvl7DUALmo5Kcn9vXN28DXlomSdSL7V5gZtF865E+WihJNo+3ItIp77Lfk6/MNy/7LRgedO7+awTVFrsGGv3DlGuL+1as7/3F3p3Pe3Vp0jE8HfVp0jE8Hflk+Xxoc0z87HvHx4cjknHxHm4mFLhNj4i7Uewb8ea72jo6Ojo+M/4wep3fyUECcAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1" width="50" height="50"/>
  <layer name="Meta" width="50" height="50">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3YMQ6AIAxAUTbuf1lmVyZciqX4XvIHY9KAk+norQ1Jv6uiyDu8zZjf7/hmUTNvvcfq+eR7fDUXAAAAVirvgbJ3ZhE7t+wzSJIk3VTmv+WJKp4ZIMMDSO4NShAnAAA=
+   H4sIAAAAAAAAA+1W2w7FIAjb2/7/Z/d8nk6yLMEWBcWtTZpsXoAqKtd5HJcoip8jAjsuCow/RsuzzbKL/N37GT8eHZb9lk9Ls+cf6WC+Gb3MXLSXUTpQrIwOJt9G84GNadQmmj/73H8R3vWtvh+V42Pu+Z6+bLDvWHXM0hFlM+vOzQJTJ3jqF+QrCzN1ZILJd6+Ou36Pbw96zmnk2o/Wb9aYHXQw+cC8Y6061BM3smf1RaxjtI5We3Z93aMFzZl5B0bo2B1v0fHH6PlaCSsfd+EbNIiiKIqiKFbiytqyInaMWRAEYQV+mdN9XRAnAAA=
+  </data>
+ </layer>
+ <layer name="Fuzzables" width="50" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3QMQoAIAwEQTv//1pbn2AEkYPM1CkuOwYAACdrvrmhLr1n+r7fOvfo/HtFep/0fQAAAAAAwJ0Nf4fYmBAnAAA=
+  </data>
+ </layer>
+ <layer name="Grizzables" width="50" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3WsREAIAwDsXTsPy0tY+Ak0gTf+M5VACS753cBZLMRAACYp8PP79AIAAAAsNED3YkR6RAnAAA=
+  </data>
+ </layer>
+ <layer name="Start" width="50" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3OMREAAAgEoN/sn9bVFJ6DkIAEAIANXdcDAAAAAAAAgF8GKKotgxAnAAA=
   </data>
  </layer>
 </map>

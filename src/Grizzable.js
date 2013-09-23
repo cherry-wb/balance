@@ -7,7 +7,7 @@ var cocos = require('cocos2d')
 
 function Fuzzable() {
 	Fuzzable.superclass.constructor.call(this)
-  this.name = "Fuzzable";
+  this.name = "Grizzable";
 
 	this.moveSpeed = 3.5;
     this.speedDecayRate = 0.99;

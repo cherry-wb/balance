@@ -8,7 +8,9 @@ var cocos  = require('cocos2d')
   , Map  = require('/Map')
 
 
-function Balance () {
+var currentMap = "IslandMap";
+
+function Balance (mapname) {
     // You must always call the super class version of init
     Balance.superclass.constructor.call(this)
 
@@ -20,29 +22,27 @@ function Balance () {
 
     // Add Map
     // var map = new Map({"file":'/resources/level_1.tmx'})
-    var map = new Map({"file":'/resources/IslandMap.tmx'})
+    var map = new Map({"file":'/resources/'+mapname+'.tmx'})
     this.addChild(map)
     this.map = map
 
     //Add Player
     var player = new Player()
-    player.position = new geom.Point(1000, - 1000)
+    if (map.startPosition) {
+        player.position.x = map.startPosition.x;
+        player.position.y = map.startPosition.y;
+    }
+    else {
+        player.position.x =  1000;
+        player.position.y = -1000;
+    }
     this.addChild(player)
     this.player = player
 
-
     // Add map fuzzables
-
     map.placeActors(Fuzzable, 'Fuzzables');
     map.placeActors(Grizzable, 'Grizzables');
     map.follow(player);
-
-    // //Add Fuzzables
-    // for (var i=0;i<20;i++) {
-    //     var fuzz = new Fuzzable()
-    //     fuzz.position = new geom.Point(Math.random()*10*fuzz.contentSize.width+(140-25), s.height - (210-25)+Math.random()*10*fuzz.contentSize.height)
-    //     this.addChild(fuzz)
-    // }
 
     this.handleMovement = function (movement) {
         if (player.alive) {
@@ -59,7 +59,6 @@ Balance.inherit(cocos.nodes.Layer, {
 
     keyPress: function (evt) {
         var movement = null;
-        console.log(evt.which);
         switch (evt.which) {
             case 115: // 40 Down
                 movement = "down";
@@ -73,8 +72,12 @@ Balance.inherit(cocos.nodes.Layer, {
             case 113: // 37 Left
                 movement = "left";
                 break;
+            case 114:// letter R
+                currentMap == "IslandMap" ? currentMap = "level_1" : currentMap = "IslandMap";
+                this.restart()
+                break;
         }
-        this.handleMovement(movement);
+        if (movement) this.handleMovement(movement);
     },
 
     // mouseMoved: function (evt) {
@@ -91,12 +94,23 @@ Balance.inherit(cocos.nodes.Layer, {
         var scene = new cocos.nodes.Scene()
 
         // Add our layer to the scene
-        scene.addChild(new Balance())
+        var layer = new Balance(currentMap)
+        scene.addChild(layer)
 
         director.replaceScene(scene)
+        launchUpdates(layer);
     }
 });
 
+
+function launchUpdates (balance) {
+    var director = cocos.Director.sharedDirector
+    events.addListener(director, 'update', function () {
+        for (var i=0;i<balance.children.length;i++){
+            events.trigger(balance.children[i], 'update');
+        }
+    });
+}
 /**
  * Entry point for the application
  */
@@ -110,7 +124,7 @@ function main () {
     events.addListener(director, 'ready', function (director) {
         // Create a scene and layer
         var scene = new cocos.nodes.Scene()
-          , layer = new Balance()
+          , layer = new Balance(currentMap)
 
         layer.anchorPointInPixels.x += 200
         layer.anchorPointInPixels.y += 200
@@ -122,11 +136,8 @@ function main () {
         // Run the scene
         director.replaceScene(scene)
 
-        events.addListener(director, 'update', function () {
-            for (var i=0;i<layer.children.length;i++){
-                events.trigger(layer.children[i], 'update');
-            }
-        });
+
+        launchUpdates(layer)
     })
 
     // Preload our assets

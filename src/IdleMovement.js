@@ -4,7 +4,6 @@ var events = require('events')
 
 function IdleMovement () {
 	
-
 	var player = this;
 
 	this.delayMovementUpdateCounter = 0;

@@ -7,6 +7,7 @@ function Map (opts) {
     Map.superclass.constructor.call(this, opts)
     // var map = new cocos.nodes.TMXTiledMap({"file": '/resources/level_1.tmx'})
     var map = this;
+    this.startPosition = new geom.Point(1000,-1000);
     this.name = "Map";
     var meta_layer = null;
     var fuzzable_layer = null;
@@ -15,13 +16,19 @@ function Map (opts) {
         if (map.children[i].layerName == 'Meta') {
             meta_layer = map.children[i];
         }
+        if (map.children[i].layerName == "Start") {
+            for (var k=0;k<map.children[i].tiles.length;k++) {
+                if (map.children[i].tiles[k] != 0)
+                    map.startPosition = new geom.Point(i % map.children[i].layerSize.width,-1*(i / map.children[i].layerSize.width)+(425/map.children[i].mapTileSize.height));
+            }
+            map.children[i].visible = false;
+        }
     }
     if (meta_layer) meta_layer.visible = false;
+
     this.meta_layer = meta_layer;
     var s = cocos.Director.sharedDirector.winSize;
     this.position = new geom.Point(0, s.height - map.contentSize.height)
-
-
 
     this.follow = function (player) {
 
@@ -32,7 +39,6 @@ function Map (opts) {
             map.parent._position.x = (s.width/2.0)-player.position.x;
             map.parent._position.y = (s.height/2.0)-player.position.y;
 
-            // map.position = new geom.Point(player.position.x-s.width, player.position.y-s.width);
         });
 
     }
@@ -45,7 +51,6 @@ function Map (opts) {
                 layer = map.children[i];
             }
         }
-        console.log(actor);
         if (layer) {
             layer.visible = false;
             for (var i=0;i<layer.tiles.length;i++) {

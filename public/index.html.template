@@ -5,11 +5,12 @@
         <title>Balance</title>
         <style type="text/css" media="screen">
             body {
-                font-family: Helvetica, Arial, sans-serif;
-                font-size: 10pt;
+                font-family: Futura, sans-serif;
+                font-size: 20pt;
                 background: #ddd;
                 margin: 0;
                 border: 0;
+                text-align: center;
                 padding: 0;
             }
             .cocos2d-app {
@@ -19,12 +20,32 @@
                 display: block;
                 margin: 0 auto;
             }
+            .half-image {
+                text-align: center;
+                margin-top: 20px;
+                width: 50%;
+            }
+            hr.spatial-divider {
+                height: 400px;
+            }
         </style>
     </head>
     <body>
+        <img src="/public/Balance_header.png">
+        <hr class="spatial-divider"/>
         <div class="cocos2d-app">
             Loading Balance...
             ${scripts}
         </div>
+        <hr class="spatial-divider"/>
+        <img src="/public/Balance_footer.png">
+
+        <div style="float:left;" class="half-image">
+            <img src="/public/grizzable_fuck.gif"/>
+        </div>
+        <div style="float:right" class="half-image">
+            <img src="/public/fuzzable_fuck.gif"/>
+        </div>
+        <hr class="spatial-divider"/>
     </body>
 </html>

@@ -38,12 +38,17 @@
  </layer>
  <layer name="Fuzzables" width="50" height="50">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3SsQ2AMAwEwHTZf1pa+ggEERFg+26Cf/tbAyCbrX+dgCoibu1p5oqduXZ245nb+xOj2U1E21C0vKtU7c1aEXZ0lPFO7gjdKvCH92W9edZeAAAAwL/tV6S0qRAnAAA=
+   H4sIAAAAAAAAA+3SwQkAIBADwfvZf7V+7UHQMzhTwQZSBQCwZ47ugnuStya384ZfP5S2O60XAAAAAADghAXDoWjUECcAAA==
   </data>
  </layer>
  <layer name="Grizzables" width="50" height="50">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3PIQ4AIRRDQRz3Py12LSEkS1D9ZMbWvLYGAAAAAADAqdHvtiRVOmenzS9/S3HTW+3jn92f5I/JbatKrQBApg/5sz2IECcAAA==
+   H4sIAAAAAAAAA+3RyQ0AIAgEQH72X61fetBEAs5UsEcEAAAAAAAAzLBXdYL5bjf2Ua1u+3fLe+KHjgDwUgLpGN12ECcAAA==
+  </data>
+ </layer>
+ <layer name="Start" width="50" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3BAQ0AAADCoPdPbQ43oAAAAAAAAAAAAODfAC7KO00QJwAA
   </data>
  </layer>
 </map>
