@@ -1,5 +1,4 @@
 
-
 balance
 =======
 
@@ -7,7 +6,7 @@ Built to compete in the Comedy Hack Day 2013 at the MIT Media Lab.
 
 The balance between fuzzables and grizzales is in your hands. Will you help restore order to the fuzzable world or let it submit to oily despair.
 
-**contributors** Jonathan Raiman (code), Alex Fram (art).
+**contributors** [Jonathan Raiman](http://github.com/JonathanRaiman) (code), [Alex Fram](http://www.alexfram.com) (art).
 
 installation
 =======
